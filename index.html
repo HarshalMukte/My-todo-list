@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY TODO</title>
+  <!-- External css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- font-awesome  cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--for favicon  -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1>Harshal's Todos</h1>
+    </header>
+
+    <form id="form">
+      <div class="input name">
+        <label for="name">Name</label>
+        <input type="text" class="todoNameInput name" />
+      </div>
+
+      <div class="input discription">
+        <label for="name">Description</label>
+        <input type="text" class="tododiscriptionInput" />
+      </div>
+
+      <div class="buttons">
+        <div class="add-todo-button">
+          <button class="todo-button" type="submit">Add Todo</button>
+        </div>
+
+        <div class="select">
+          <select name="todos" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </div>
+
+    </form>
+
+    <div class="todo-container">
+      <ul class="todo-list">
+
+        <!-- <div class="todo">
+          <div class="text">
+            <h2 id="name">Task 1<h2>
+            <li id="description">My name is Harshal</li>
+          </div>
+          <button class="completed-btn">complete</button>
+          <button class="trash-btn">delete</button>
+        </div> -->
+
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

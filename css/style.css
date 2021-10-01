@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #333333;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .wrapper {
+  width: 750px;
+  padding-bottom: 5vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  body .wrapper {
+    width: auto;
+  }
+}
+
+body header {
+  font-size: 1.5rem;
+}
+
+body header {
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body form {
+  width: 100%;
+  background-color: #444444;
+  border-radius: 50px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+}
+
+@media screen and (max-width: 800px) {
+  body form {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body form .input {
+  width: 230px;
+  margin: 0px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body form .input label {
+  color: #c7c2c2;
+  padding: 5px;
+  font-size: 1.05rem;
+}
+
+body form .input input {
+  border-radius: 20px;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  border: 1.5px solid #ff9900;
+  background-color: #f5f6f7;
+  outline: none;
+  color: #2c2b2b;
+}
+
+body form .buttons {
+  margin-left: 2.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  body form .buttons {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 12;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin: 0;
+  }
+}
+
+body form .buttons .add-todo-button {
+  margin: 0.5rem;
+}
+
+body form .buttons .add-todo-button .todo-button {
+  width: 10rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 20px;
+  background-color: #ff9900;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  body form .buttons .add-todo-button .todo-button {
+    border-radius: 50%;
+    width: 3rem;
+    padding: 8px 12px;
+    font-size: 1.8rem;
+  }
+}
+
+body form .buttons .select {
+  cursor: pointer;
+  margin: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  body form .buttons .select {
+    display: none;
+  }
+}
+
+body form .buttons .select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #ff9900;
+  top: -8px;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body form .buttons .select select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  color: #ff9900;
+  width: 10rem;
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  background-color: #f5f6f7;
+}
+
+body .todo-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  body .todo-container {
+    width: auto;
+  }
+}
+
+body .todo-container .todo-list {
+  width: 100%;
+  list-style: none;
+}
+
+body .todo-container .todo-list .todo {
+  position: relative;
+  margin: 0.5rem 0;
+  padding: 15px 25px;
+  background-color: #444444;
+  color: #c7c2c2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+  border-radius: 2px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body .todo-container .todo-list .todo.curve {
+  border-radius: 0 0 50px 50px;
+}
+
+@media screen and (max-width: 600px) {
+  body .todo-container .todo-list .todo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 15px 45px;
+  }
+}
+
+body .todo-container .todo-list .todo.completed {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 600px) {
+  body .todo-container .todo-list .todo.completed {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    padding: 12px 25px;
+  }
+}
+
+body .todo-container .todo-list .todo.completed .text {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+body .todo-container .todo-list .todo.completed .text #name {
+  color: #aca9a9;
+}
+
+body .todo-container .todo-list .todo.fall {
+  -webkit-animation: popdown 0.5s ease-out forwards;
+          animation: popdown 0.5s ease-out forwards;
+  z-index: -1;
+}
+
+body .todo-container .todo-list .todo .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  body .todo-container .todo-list .todo .text {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}
+
+body .todo-container .todo-list .todo .text #name {
+  color: #ff9900;
+  font-size: 2.2rem;
+}
+
+body .todo-container .todo-list .todo .text #description {
+  font-size: 1rem;
+  color: #c7c2c2;
+}
+
+body .todo-container .todo-list .todo .completed-btn,
+body .todo-container .todo-list .todo .trash-btn {
+  background-color: #e6e6e6;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin: 0 0.5rem;
+}
+
+body .todo-container .todo-list .todo .completed-btn {
+  color: #2694c7;
+  border: 1px solid #2183b1;
+}
+
+body .todo-container .todo-list .todo .completed-btn:active {
+  background-color: #2694c7;
+  color: #fff;
+}
+
+body .todo-container .todo-list .todo .trash-btn {
+  color: #e73232;
+  border: 1px solid #e73232;
+}
+
+body .todo-container .todo-list .todo .trash-btn:active {
+  background-color: #e73232;
+  color: #fff;
+}
+
+@-webkit-keyframes popdown {
+  0% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+    opacity: 1;
+  }
+  2% {
+    -webkit-transform: translateY(-4px) scale(1.1);
+            transform: translateY(-4px) scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateY(6rem) rotateZ(20deg) scale(0.8);
+            transform: translateY(6rem) rotateZ(20deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes popdown {
+  0% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+    opacity: 1;
+  }
+  2% {
+    -webkit-transform: translateY(-4px) scale(1.1);
+            transform: translateY(-4px) scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateY(6rem) rotateZ(20deg) scale(0.8);
+            transform: translateY(6rem) rotateZ(20deg) scale(0.8);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
